@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid gray;
+            background-color: aliceblue;
+        }
+        nav span{
+            padding: 10px;
+            background-color: rgb(35, 35, 237);
+            text-shadow: 1px 2px 2px blanchedalmond;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .frm-login{
+            padding: 10px;
+            border: 2px solid black;
+        }
+    </style>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+        function Navbar(){
+            return(
+                <nav>
+                    <span>Home</span>
+                    <span>About</span>
+                    <span>More</span>
+                    <span>INfo</span>
+                </nav>
+            )
+        }
+        function Login(){return(
+            <div className="container">
+                <form className="frm-login">
+                    <h2>login form</h2>
+                    <dl>
+                        <dt>username</dt>
+                        <dd><input type="text"/></dd>
+                        <dt>password</dt>
+                        <dd><input type=" text"/></dd>
+                        <button>submit</button>
+                    </dl>
+                </form>    
+            </div>
+        )}
+        ReactDOM.render(
+            <section>
+                <Navbar/>
+                <Login/>
+            </section>,
+            document.getElementById("root")
+        );
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
